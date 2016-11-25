@@ -1,23 +1,48 @@
 <p>
   home works!
 </p>
+
+<!--<ul>
+  <li *ngFor="let item of produits">{{item.produit}} {{item.description}}</li>
+</ul>-->
+<div class="row">
+<div *ngFor="let item of produits">
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{item.lien}}">
+        </div>
+        <div class="card-content">
+          <h4>{{item.produit}}</h4>
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <div class="container">
   <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-        <input placeholder="produit" id="produit" type="text" class="validate">
+        <input placeholder="produit" id="produit" type="text" class="validate" #produit>
         <label for="produit">Nom produit</label>
       </div>
         <div class="input-field col s12">
-          <input placeholder="Lien image" id="lien" type="text" class="validate">
+          <input placeholder="Lien image" id="lien" type="text" class="validate" #lien>
           <label for="lien">Lien image</label>
         </div>
         <div class="input-field col s12">
-          <input placeholder="Description" id="description" type="text" class="validate">
+          <input placeholder="Description" id="description" type="text" class="validate" #description>
           <label for="description">Description</label>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <button class="btn waves-effect waves-light" (click)="onSubmitProduits(produit.value,lien.value,description.value)">Submit
           <i class="material-icons right">Envoyer</i>
         </button>
 

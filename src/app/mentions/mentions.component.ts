@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mentions.component.css']
 })
 export class MentionsComponent implements OnInit {
-
+  text='Bonjour, mentions légales';
   constructor() { }
 
   ngOnInit() {
