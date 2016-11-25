@@ -10,6 +10,8 @@ import { ContactlistComponent } from './contactlist/contactlist.component';
 import { MentionsComponent } from './mentions/mentions.component';
 import { HeaderComponent } from './header/header.component';
 
+import { routing } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+      routing
   ],
   providers: [],
   bootstrap: [AppComponent]
